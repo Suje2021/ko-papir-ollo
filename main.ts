@@ -1,7 +1,7 @@
-let változó = 0
+let item = 0
 input.onGesture(Gesture.Shake, function () {
-    változó = randint(0, 2)
-    if (változó == 0) {
+    item = randint(0, 2)
+    if (item == 0) {
         basic.showLeds(`
             # # # # #
             # # # # #
@@ -9,21 +9,9 @@ input.onGesture(Gesture.Shake, function () {
             # # # # #
             # # # # #
             `)
-    } else if (változó == 1) {
-        basic.showLeds(`
-            # # . . #
-            # # . # .
-            . . # . .
-            # # . # .
-            # # . . #
-            `)
+    } else if (item == 1) {
+        basic.showIcon(IconNames.Scissors)
     } else {
-        basic.showLeds(`
-            . . # . .
-            . # # # .
-            # # . # #
-            . # # # .
-            . . # . .
-            `)
+        basic.showIcon(IconNames.Target)
     }
 })
